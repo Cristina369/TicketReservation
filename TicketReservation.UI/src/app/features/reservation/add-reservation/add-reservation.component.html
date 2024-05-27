@@ -1,0 +1,84 @@
+<div class="div-reservation">
+  <div class="container">
+    <div class="line"></div>
+    <h1 class="mt-3 title">Add Reservation</h1>
+
+    <ng-container *ngIf="addReservationRequest">
+      <form (ngSubmit)="onSubmit()">
+        <div class="mt-3">
+          <label for="paymentMethod" class="form-label">Payment Method</label>
+          <select
+            id="paymentMethod"
+            class="form-control"
+            [(ngModel)]="addReservationRequest.paymentMethod"
+            name="paymentMethod"
+          >
+            <option value="" disabled>Select Payment Method</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bankTransfer">Bank Transfer</option>
+          </select>
+        </div>
+
+        <div class="mt-3">
+          <label for="clientFirstName" class="form-label">First Name</label>
+          <input
+            type="text"
+            id="clientFirstName"
+            class="form-control"
+            [(ngModel)]="addReservationRequest.clientFirstName"
+            name="clientFirstName"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label for="clientLastName" class="form-label">Last Name</label>
+          <input
+            type="text"
+            id="clientLastName"
+            class="form-control"
+            [(ngModel)]="addReservationRequest.clientLastName"
+            name="clientLastName"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label for="clientEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            id="clientEmail"
+            class="form-control"
+            [(ngModel)]="addReservationRequest.clientEmail"
+            name="clientEmail"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label for="clientPhone" class="form-label">Phone</label>
+          <input
+            type="tel"
+            id="clientPhone"
+            class="form-control"
+            [(ngModel)]="addReservationRequest.clientPhone"
+            name="clientPhone"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label for="clientAddress" class="form-label">Address</label>
+          <input
+            type="text"
+            id="clientAddress"
+            class="form-control"
+            [(ngModel)]="addReservationRequest.clientAddress"
+            name="clientAddress"
+          />
+        </div>
+
+        <div class="mt-3">
+          <button type="submit" class="btn btn-outline-success">Submit</button>
+        </div>
+      </form>
+    </ng-container>
+  </div>
+</div>

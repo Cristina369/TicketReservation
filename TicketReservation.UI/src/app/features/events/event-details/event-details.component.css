@@ -1,0 +1,150 @@
+#event-container {
+  width: 60%;
+  background: white;
+  padding: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#event-container .seat.selected {
+  fill: red;
+}
+
+section {
+  background-color: black;
+}
+
+.container-event {
+  width: 100%;
+  background-color: black;
+  padding: 5vw;
+}
+
+.line {
+  width: 90%;
+  height: 0.5px;
+  margin-left: 5px;
+  background-color: #7a7a7a;
+}
+
+.date {
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5vw;
+}
+
+.details h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.details h3 {
+  color: rgb(175, 174, 174);
+  font-size: 15px;
+  font-weight: 100;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.details h4 {
+  padding-top: 20px;
+  color: rgb(216, 214, 214);
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.details h5 {
+  padding-top: 20%;
+  color: white;
+  font-size: 50px;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.event-div {
+  padding: 20px;
+}
+
+.div-tickets {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-tickets h1,
+.div-tickets a {
+  margin-right: 40%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.btn {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 10px 20px;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+  .details {
+    padding: 1vw;
+  }
+  .event-div {
+    padding: 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  .details {
+    flex-direction: column-reverse;
+  }
+
+  .event-div {
+    padding: 5px;
+  }
+
+  .details h4 {
+    font-size: 17px;
+  }
+
+  .details h1 {
+    font-size: 30px;
+  }
+
+  .details h5 {
+    padding-top: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: end;
+  }
+
+  #event-container {
+    width: 90%;
+  }
+}

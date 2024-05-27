@@ -1,0 +1,38 @@
+<div class="all-events">
+  <div class="title">
+    <h1>All Events Here</h1>
+  </div>
+  <div class="container">
+    <ng-container *ngIf="eventsM$ | async as events">
+      <div class="row">
+        <div *ngFor="let eventM of events; let i = index" class="col-md-6 mb-4">
+          <div class="card bg-dark text-white">
+            <img
+              [src]="eventM.imageEvent ? eventM.imageEvent : defaultImage"
+              class="card-img"
+              [alt]="eventM.name"
+            />
+            <div class="card-img-overlay">
+              <div class="div-text">
+                <div>
+                  <h5 class="card-title">{{ eventM.name }}</h5>
+                  <p class="card-text">
+                    {{ eventM.eventDate | date : "MMMM d, yyyy" }}
+                  </p>
+                  <h1 class="card-price">200 RON</h1>
+                </div>
+                <div>
+                  <a
+                    class="btn btn-outline-light"
+                    [routerLink]="['/event-details', eventM.id]"
+                    >View more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="div-home">
+  <div>
+    <h1 class="title">THE HOTTEST</h1>
+  </div>
+  <div class="events-carousel">
+    <div class="w-25"></div>
+    <div class="events">
+      <ng-container *ngIf="eventsM$ | async as events">
+        <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div
+              class="carousel-item"
+              *ngFor="let eventM of events; let i = index"
+              [class.active]="i === 0"
+            >
+              <a
+                class="image-event"
+                [routerLink]="['/event-details', eventM.id]"
+              >
+                <img
+                  [src]="eventM.imageEvent || defaultImage"
+                  class="d-block w-100"
+                  [alt]="eventM.name"
+                />
+              </a>
+              <div class="carousel-caption">
+                <h5>{{ eventM.name }}</h5>
+                <h4>{{ eventM.eventDate | date : "MMMM d, yyyy" }}</h4>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#eventCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#eventCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

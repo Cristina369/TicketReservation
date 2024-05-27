@@ -1,0 +1,80 @@
+<div class="div-location">
+  <div class="line"></div>
+  <div class="container">
+    <h1 class="mt-3 title">Add Location</h1>
+
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+      <div class="mt-2 mb-5">
+        <div class="mt-3">
+          <label class="form-label">Name</label>
+          <input
+            type="text"
+            id="locationName"
+            class="form-control"
+            name="locationName"
+            [(ngModel)]="model.name"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label">Description</label>
+          <input
+            type="text"
+            id="locationDescription"
+            class="form-control"
+            name="locationDescription"
+            [(ngModel)]="model.description"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label">Type</label>
+          <input
+            type="text"
+            id="locationType"
+            class="form-control"
+            name="locationType"
+            [(ngModel)]="model.type"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label">Address</label>
+          <input
+            type="text"
+            id="locationAddress"
+            class="form-control"
+            name="locationAddress"
+            [(ngModel)]="model.address"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label">Capacity</label>
+          <input
+            type="text"
+            id="locationCapacity"
+            class="form-control"
+            name="locationCapacity"
+            [(ngModel)]="model.capacity"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label">Location Path</label>
+          <input
+            type="text"
+            id="locationPath"
+            class="form-control"
+            name="locationPath"
+            [(ngModel)]="model.locationPath"
+          />
+        </div>
+
+        <div class="mt-3">
+          <button type="submit" class="btn btn-outline-success">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

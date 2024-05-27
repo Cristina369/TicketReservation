@@ -1,0 +1,71 @@
+.div-home {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 12vw;
+  font-weight: 300;
+  color: white;
+  text-align: start;
+  position: relative;
+  margin-top: -50px;
+  z-index: 99;
+}
+
+.description {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 300;
+  color: white;
+  text-align: start;
+  padding-bottom: 40px;
+}
+
+.events-carousel {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-top: 5px;
+}
+
+.events {
+  background-color: black;
+  width: 70%;
+  margin-top: -8vw;
+  z-index: 3;
+}
+
+.carousel-caption h5 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3.5vw;
+  font-weight: 300;
+  color: white;
+  text-align: end;
+}
+
+.carousel-caption h4 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.4vw;
+  font-weight: 200;
+  color: white;
+  text-align: end;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 300px) {
+  .title {
+    margin-top: 0px;
+    padding-top: 20px;
+  }
+  .events {
+    width: 95%;
+  }
+  .events-carousel > div:first-child {
+    width: 0px !important;
+  }
+}

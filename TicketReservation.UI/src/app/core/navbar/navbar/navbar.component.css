@@ -1,0 +1,78 @@
+.navbar {
+  background-color: black;
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.navbar ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav-item a {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.btn {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: white;
+  border-color: rgb(119, 118, 118);
+  padding: 8px 20px;
+}
+
+span {
+  order: 1;
+  font-size: 16px;
+  color: #e6e6e6;
+  font-weight: 200;
+}
+
+.admin-navbar {
+  order: 2;
+}
+
+.btns {
+  order: 3;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 300px) {
+  span {
+    display: none;
+    width: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .nav-item a {
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+  .btn {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}

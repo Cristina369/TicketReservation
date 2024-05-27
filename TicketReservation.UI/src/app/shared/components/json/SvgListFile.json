@@ -1,0 +1,17 @@
+[
+  {
+    "number": 1,
+    "name": "seat-map01",
+    "seatMapPath": "/assets/seat-map01.svg"
+  },
+  {
+    "number": 2,
+    "name": "seat-map",
+    "seatMapPath": "/assets/seat-map.svg"
+  },
+  {
+    "number": 3,
+    "name": "seat-map-medium",
+    "seatMapPath": "/assets/seat-map-medium.svg"
+  }
+]

@@ -1,0 +1,30 @@
+<section>
+  <div class="container-event">
+    <ng-container *ngIf="eventM">
+      <div class="date">
+        {{ eventM.eventDate | date : "MMMM d, yyyy" }}
+        <div class="line"></div>
+      </div>
+      <div class="details">
+        <div class="event-div">
+          <h3>{{ eventM.locationName }}</h3>
+          <h1>{{ eventM.name }}</h1>
+          <h4>{{ eventM.description.substring(0, 250) }}...</h4>
+          <h5>200 RON</h5>
+        </div>
+        <div>
+          <img [src]="eventM.imageEvent" class="card-img" [alt]="eventM.name" />
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div>
+    <div class="div-tickets">
+      <h1>Buy a Ticket</h1>
+      <div id="event-container"></div>
+      <a class="btn btn-outline-light" (click)="continueToBuy()"
+        >Continue to Buy</a
+      >
+    </div>
+  </div>
+</section>

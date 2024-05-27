@@ -1,0 +1,46 @@
+<div class="login">
+  <div class="div-login">
+    <div class="row justify-content-center mx-auto">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+          <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+            <h1 class="text-white fw-medium text-center">Welcome Back</h1>
+            <p class="text-white text-center">
+              Enter the fields below to get started
+            </p>
+            <div class="content d-flex flex-column">
+              <div class="mt-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  [(ngModel)]="model.email"
+                />
+              </div>
+
+              <div class="mt-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                  [(ngModel)]="model.password"
+                />
+              </div>
+              <a href="#" class="link mt-5 text-decoration-none text-white"
+                >Don't have an account? Sign Up</a
+              >
+            </div>
+
+            <div class="action mt-3 text-center">
+              <button type="submit" class="btn btn-outline-light">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="navbar">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <ng-container
+      *ngIf="user == undefined || !user?.roles?.includes('SuperAdmin')"
+    >
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"
+          ><i class="icons bi bi-house"></i>Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/events']"
+          ><i class="icons bi bi-house"></i>All Events</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/contact']"
+          ><i class="icons bi bi-house"></i>Contact</a
+        >
+      </li>
+    </ng-container>
+
+    <ng-container
+      *ngIf="user !== undefined && user?.roles?.includes('SuperAdmin')"
+    >
+      <div class="admin-navbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              [routerLink]="['/admin/events']"
+            >
+              Events
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              [routerLink]="['/admin/reservations']"
+            >
+              Reservations
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              role="button"
+              aria-expanded="false"
+              [routerLink]="['/admin/costumers']"
+            >
+              Costumers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              role="button"
+              aria-expanded="false"
+              [routerLink]="['/admin/locations']"
+            >
+              Locations
+            </a>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="user === undefined; else showLogout" class="btns">
+      <a [routerLink]="['/login']" class="btn btn-outline-dark">Login</a>
+    </ng-container>
+    <ng-template #showLogout>
+      <span>{{ user?.email }}</span>
+      <button class="btn btns btn-outline-dark ms-3" (click)="onLogout()">
+        Logout
+      </button>
+    </ng-template>
+  </ul>
+</div>

@@ -1,0 +1,42 @@
+<div class="all-customers-container">
+  <div class="line"></div>
+  <div class="texts"><h1 class="title">All Customers Here</h1></div>
+  <div class="div-table">
+    <ng-container *ngIf="customers$ | async as customers">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th>ID Customer</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of customers">
+              <td>{{ customer.customerId }}</td>
+              <td>{{ customer.firstName }}</td>
+              <td>{{ customer.lastName }}</td>
+              <td>{{ customer.email }}</td>
+              <td>{{ customer.phone }}</td>
+              <td>{{ customer.address }}</td>
+              <td class="btns">
+                <button
+                  type="button"
+                  class="btn btn-outline-danger ms-3"
+                  (click)="onDelete(customer.customerId)"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ng-container>
+  </div>
+</div>

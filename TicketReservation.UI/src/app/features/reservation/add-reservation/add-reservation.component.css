@@ -1,0 +1,38 @@
+.div-event,
+.div-reservation {
+  background-color: black;
+  padding: 3%;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55vw;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+form {
+  width: 80%;
+}
+
+.line {
+  padding-bottom: 30px;
+  border-top: 1px solid #7a7a7a;
+}
+
+@media only screen and (max-width: 700px) and (min-width: 300px) {
+  .container {
+    width: 80vw;
+  }
+}
