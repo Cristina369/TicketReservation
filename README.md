@@ -2,7 +2,7 @@
 The Ticket Reservation Application offers a platform for users to discover upcoming concerts, explore event details, select seats via interactive SVG seat maps, and securely complete bookings.
 Administrators manage tickets, seats, events, and reservations for efficient operations.
 
-![Home page](https://github.com/Cristina369/TicketReservation/tree/main/TicketReservation.UI/src/app/shared/components/Ticket-Reservetion.png?raw=true "Ticket Reservation Application")
+![Home page](https://github.com/Cristina369/TicketReservation/blob/main/TicketReservation.UI/src/app/shared/components/Ticket-Reservation.jpg?raw=true "Ticket Reservation Application")
 
 Admins manage all aspects of ticket management, including tickets, seats, events, and reservations, through an intuitive dashboard designed for efficiency and ease of use.
 </br>
@@ -32,7 +32,7 @@ coming soon...
 - Booking Management: Users can book seats for desired events and manage their reservations.
 - Admin Dashboard: Admins have full control over ticket management, including tickets, seats, events, and reservations.
 - Secure Authentication and Authorization: The app ensures robust security with ASP.NET Identity and JWT.
-- Responsive Design: The frontend is built with Angular Material for a seamless user experience across devices.
+- Responsive Design: The frontend is built with Angular and Bootstrap for a seamless user experience across devices.
 </br>
 
 ## Getting Started
@@ -41,7 +41,7 @@ Before running the application, ensure you have the following installed:
 - Node.js: To run the frontend Angular application.
 - Angular CLI: To build and serve the Angular application.
 - .NET Core SDK: To run the backend ASP.NET Core application.
-- SQL Server: To host the database (if not using SQLite for development).
+- SQL Server: To host the database .
 
 #### Clone the Repository
 ```git clone https://github.com/your-username/car-rental-app.git```
