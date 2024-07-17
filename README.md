@@ -22,7 +22,7 @@ Admins manage all aspects of ticket management, including tickets, seats, events
 - State Management: RxJS
 - Routing: Angular Router
 
-## Design
+## Demo
 coming soon...
 </br>
 
